@@ -2,7 +2,7 @@
 
 ## Genome-wide analyses of the binding domains underlying chromatin folding
 
-Repository for scripts and functions used for the project on genome wide determinants of chromatin architecture.
+Repository for scripts and data of the project.
 
 All the codes are written in Python 3.
 
