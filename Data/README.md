@@ -17,3 +17,7 @@ The file labels.txt contains the epigenetic classification of the binding domain
 ### Epigentic profiles
 
 The file .txt contains the correlations among the binding domains of the even numbered chromosomes and the epigenetic marks. The file .txt is the random control model.
+
+### ENCODE DATA
+
+The accession numbers of the ENCODE data used in the genome wide analysis are listed in the file ENCODE_accession_numbers.txt.
