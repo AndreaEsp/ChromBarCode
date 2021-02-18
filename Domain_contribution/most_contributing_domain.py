@@ -48,4 +48,4 @@ for j in np.arange(0,N):
 		tot+=1
 
 # Uncomment the following line to save the data
-np.savetxt('1st_contribution.txt',matrix_first,fmt="%d")
+# np.savetxt('1st_contribution.txt',matrix_first,fmt="%d")
