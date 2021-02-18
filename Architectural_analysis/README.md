@@ -1,3 +1,3 @@
 # Architectural analysis
 
-### This contains scripts to plot the bindind domains and to evaluate their contribution to the 3D architecture.
+### This contains scripts to plot the binding domains and to evaluate their contribution to the 3D architecture.
