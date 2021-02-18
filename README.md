@@ -1,4 +1,4 @@
-# ChromBarCodeaaa
+# ChromBarCode
 
 ## Genome-wide analyses of the binding domains underlying chromatin folding
 
