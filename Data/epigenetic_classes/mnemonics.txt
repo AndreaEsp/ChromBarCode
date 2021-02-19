@@ -1,4 +1,4 @@
-Binding_domain	Class_number	Description
+Binding_domain	Class_number	Class_name
 chr2_domain_1	5	K27_Repressed_1
 chr2_domain_2	6	K27_Repressed_2
 chr2_domain_3	5	K27_Repressed_1
