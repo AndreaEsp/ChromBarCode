@@ -12,7 +12,7 @@ This folder contains the files with the genomic coordinates of the genome-wide 5
 
 ### Epigenetic classes
 
-The file labels.txt contains the epigenetic classification of the binding domains of even numbered chromosomes. The file .txt specifies the chromosome, the binding domain and the class name.
+The file labels.txt contains the epigenetic classification of the binding domains of even numbered chromosomes. The file mnemonics.txt specifies the chromosome, the binding domain and the class name.
 
 ### Epigentic profiles
 
