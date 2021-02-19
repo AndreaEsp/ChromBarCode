@@ -16,7 +16,7 @@ The file labels.txt contains the epigenetic classification of the binding domain
 
 ### Epigentic profiles
 
-The file .txt contains the correlations among the binding domains of the even numbered chromosomes and the epigenetic marks. The file .txt is the random control model.
+The file significant_correlations.csv contains the correlations among binding domains of the even numbered chromosomes and epigenetic marks. The file control_correlations.csv.gz. is the random control model.
 
 ### ENCODE data
 
