@@ -25,7 +25,7 @@ iteration = 100
 for chr in ['%d'%i for i in c_info.chrs]:
 	print('Chr%s'%chr)
 	data_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+os.sep+'Data'
-	pol = poly.polymer(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%s.txt'%(chr),coords=[case[chr]['c_start'],case[chr]['c_end']])
+	pol = poly.polymer(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%s.txt'%(chr),coords=[case[chr]['c_start'],case[chr]['c_end']])
 
 	# Sort the binding domains by (ascending) order of their barycenter
 	pol.sort()
@@ -42,7 +42,7 @@ print("\nRandom controls")
 rnd_int_len_all = []
 for chr,start,end in zip(['%d'%i for i in c_info.chrs],c_info.c_start,c_info.c_end):
 	print('Chr%s rand'%chr)
-	pol = poly.polymer(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%s.txt'%(chr),coords=[case[chr]['c_start'],case[chr]['c_end']])
+	pol = poly.polymer(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%s.txt'%(chr),coords=[case[chr]['c_start'],case[chr]['c_end']])
 	rnd_int_len = []
 	for k in range(iteration):
 		rnd_model = pol.copy()

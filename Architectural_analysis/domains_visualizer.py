@@ -34,7 +34,7 @@ end   = case[chrom]['c_end']
 resol = c_info.resol
 
 data_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+os.sep+'Data'
-pol = poly.polymer(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%s.txt'%(chrom),coords=[start, end])
+pol = poly.polymer(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%s.txt'%(chrom),coords=[start, end])
 
 # Choose the region of the selected chr to plot
 z_start = start

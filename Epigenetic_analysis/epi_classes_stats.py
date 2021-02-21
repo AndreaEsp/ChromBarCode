@@ -19,7 +19,7 @@ chrs = np.array([i for i in range(2,23,2)])
 
 labels = np.genfromtxt(data_path+os.sep+'epigenetic_classes'+os.sep+'labels.txt')
 labels_per_chr = {'%d'%i:labels[j*ncol:(j+1)*ncol] for i,j in zip(range(2,23,2),range(11))}
-pol_per_chr = {'%d'%i:np.genfromtxt(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%d.txt'%i) for i in chrs}
+pol_per_chr = {'%d'%i:np.genfromtxt(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%d.txt'%i) for i in chrs}
 class_order = [2,3,1,4,5,6,7,8,9]
 
 # Color palette

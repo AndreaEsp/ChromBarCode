@@ -45,7 +45,7 @@ rand_corr = []
 for chr,m in zip(chrs,np.arange(len(chrs))):
 	print("Chomosome %d\n"%chr)
 	data_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+os.sep+'Data'
-	pol = np.genfromtxt(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
+	pol = np.genfromtxt(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
 	for i in range(1,len(pol[0])):
 		for j in range(replicas):
 			rand_model = build_random_model(pol[:,i])
@@ -63,7 +63,7 @@ actual_corr = []
 for chr,m in zip(chrs,np.arange(len(chrs))):
 	print("Chomosome %d\n"%chr)
 	data_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+os.sep+'Data'
-	pol = np.genfromtxt(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
+	pol = np.genfromtxt(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
 	for i in range(1,len(pol[0])):
 		r = []
 		for k in range(len(F_name)):

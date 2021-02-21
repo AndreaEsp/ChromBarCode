@@ -17,7 +17,7 @@ labels = np.genfromtxt(data_path+os.sep+'epigenetic_classes'+os.sep+'labels.txt'
 labels_per_chr = {'%d'%i:labels[j*ncol:(j+1)*ncol] for i,j in zip(range(2,23,2),range(11))}
 
 for chr in chrs:
-	pol_tmp = np.genfromtxt(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
+	pol_tmp = np.genfromtxt(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
 	cols = len(np.unique(labels_per_chr['%s'%chr]))
 	pol = np.zeros((len(pol_tmp),nclass+1))
 	pol[:,0] = pol_tmp[:,0]

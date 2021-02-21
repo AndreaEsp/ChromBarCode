@@ -24,7 +24,7 @@ iteration    = 100
 for chr in ['%d'%i for i in c_info.chrs]:
 	print('Chr%s'%chr)
 	data_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+os.sep+'Data'
-	pol = poly.polymer(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%s.txt'%(chr),coords=[case[chr]['c_start'],case[chr]['c_end']])
+	pol = poly.polymer(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%s.txt'%(chr),coords=[case[chr]['c_start'],case[chr]['c_end']])
 
 	# Compute overlap among the domains
 	overlaps.append(tools.intra_overlaps(pol))

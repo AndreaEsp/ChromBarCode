@@ -1,6 +1,6 @@
 # Data
 
-### Sbs polymers
+### prismr polymers
 
 This folder contains the genome-wide inferred distribution of binding domain types, i.e. the sbs polymer model, for each chromosome of the human GM12878 cell line.
 

@@ -17,7 +17,7 @@ labels = np.genfromtxt(data_path+os.sep+'epigenetic_classes'+os.sep+'labels.txt'
 labels_per_chr = {'%d'%i:labels[j*ncol:(j+1)*ncol] for i,j in zip(range(2,23,2),range(11))}
 case = labels_per_chr['%d'%chr]
 
-pol = np.genfromtxt(data_path+os.sep+'sbs_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
+pol = np.genfromtxt(data_path+os.sep+'prismr_polymers'+os.sep+'best_polymer_chr%d.txt'%(chr))
 N   = len(pol)
 
 # Excluding the first column (gray beads)
