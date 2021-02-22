@@ -63,7 +63,7 @@ marks = ["H3K4me2","H3K9ac","H3K27ac","H3K79me2","H4K20me1","H2AFZ"]
 #marks = ["POLR2AphosphoS2","POLR2AphosphoS5","EZH2","STAT1","ZNF687","RUNX3","CEBPZ","ZNF217","TCF12","ZNF592","USF1","HCFC1","MXI1","HSF1","ZEB1","MYB","EP300","KLF5","CEBPB","TAF1","ZNF384","CUX1","ELF1","RB1","ZBTB33","TBP","NFYB","LARP7","WRNIP1","JUNB","EBF1","BHLHE40","STAT3","SIN3A","MEF2C","NKRF","PBX3","MTA3","ESRRA","NR2F1","ZSCAN29","NR2C1","NFXL1","IKZF1","IRF3","TBL1XR1","PAX5","HDAC2","KDM1A","YY1","CHD4","RXRA","DPF2","SMAD1","MAZ","NR2C2","SIX5","CHD1","ZFP36","GATAD2B","BCL3","SRF","RBBP5","BCLAF1","BRCA1","ZNF24","SMARCA5","ZNF207","NFATC1","REST","UBTF","RELB","ZNF622","NFIC","CBX5","FOXK2","CBFB","CBX3","HDAC6","MEF2B","PAX8","MTA2","ATF7","TBX21","E2F8","ETS1","IRF5","ELK1","NBN","IRF4","MAX","RFX5","CHD2","BATF","STAT5A","JUND","BCL11A","ARID3A","ZNF143","BACH1","NRF1","SMAD5","TARDBP","SPI1","RCOR1","TRIM22","NFATC3","RAD51","GABPA","BMI1","PKNOX1","YBX1","ASH2L","EED","SKIL","E2F4","ZBTB40","SUZ12","ATF2","MAFK","NFYA","ETV6","EGR1","USF2","E4F1","MLLT1","IKZF2","TCF7","CREM","ZBED1","ARNT","HDGF","MEF2A","ZZZ3"]
 
 # Import data
-x = pd.read_csv(data_path+os.sep+'epigenetic_correlations'+os.sep+'significant_correlations.csv', usecols=marks)[marks]
+x = pd.read_csv(data_path+os.sep+'epigenetic_profiles'+os.sep+'significant_correlations.csv', usecols=marks)[marks]
 X = x.to_numpy()
 
 corr_all = []
@@ -75,7 +75,7 @@ corr_all = np.vstack(corr_all)
 corr_avg = np.vstack(corr_avg)
 
 # Noise analysis of the centroid matrix
-x_rand = pd.read_csv(data_path+os.sep+'epigenetic_correlations'+os.sep+'control_correlations.csv.gz', usecols=marks)[marks]
+x_rand = pd.read_csv(data_path+os.sep+'epigenetic_profiles'+os.sep+'control_correlations.csv.gz', usecols=marks)[marks]
 X_rand = x_rand.to_numpy()
 rnd_com = noise_centroids(X_rand, N_clust=nclass, N_step=100, method='ward', chrs=22, ncol=30)
 corr_avg = cut_off(corr_avg, rnd_com, perc_inf=10, perc_sup=90)

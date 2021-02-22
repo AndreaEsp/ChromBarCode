@@ -51,7 +51,7 @@ F_name = ["H3K4me3","H3K4me1","H3K36me3","H3K9me3","H3K27me3"]
 data_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+os.sep+'Data'
 
 # Import data
-x = pd.read_csv(data_path+os.sep+'epigenetic_correlations'+os.sep+'significant_correlations.csv', usecols=F_name)[F_name]
+x = pd.read_csv(data_path+os.sep+'epigenetic_profiles'+os.sep+'significant_correlations.csv', usecols=F_name)[F_name]
 X = x.to_numpy()
 X_norm = stats.zscore(X)
 
@@ -117,7 +117,7 @@ for i in np.arange(1,N_clusters+1):
 centroid=np.array(centroid)
 
 # Noise analysis of the centroid matrix
-x_rand = pd.read_csv(data_path+os.sep+'epigenetic_correlations'+os.sep+'control_correlations.csv.gz', usecols=F_name)[F_name]
+x_rand = pd.read_csv(data_path+os.sep+'epigenetic_profiles'+os.sep+'control_correlations.csv.gz', usecols=F_name)[F_name]
 X_rand = x_rand.to_numpy()
 rnd_com = noise_centroids(X_rand, N_clust=N_clusters, N_step=100, method=clust_method, chrs=11, ncol=30)
 final_centroid = cut_off(centroid, rnd_com, perc_inf=1, perc_sup=99)
