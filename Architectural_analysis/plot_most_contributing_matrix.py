@@ -10,9 +10,9 @@ data = np.genfromtxt('1st_contribution.txt')
 nclass = 9.
 
 # Domain contribution is colored according to the epigetic class it belongs to
-cmap = col.ListedColormap(['#ffffff','#00A2FF','#0000FF','#9437FF','#FF7F50','#B47638','#1EB001','#2F2F2F','#808000','#FF00FF','#EE230C'])
+cmap = col.ListedColormap(['#ffffff','#ffffff','#29ed02','#808000','#1EB001','#c71f0c','#00A2FF','#0000FF','#FF00FF','#B47638','#2F2F2F'])
 
-uniq_vals = set(np.reshape(data,np.size(data)))
+uniq_vals = set([-1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0])
 bounds = [i for i in uniq_vals]
 bounds.append(nclass+1)
 bounds.sort()

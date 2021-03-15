@@ -97,7 +97,7 @@ palette = ['#ffffff','#29ed02','#808000','#1EB001','#c71f0c','#00A2FF','#0000FF'
 fig1, ax1 = plt.subplots(figsize=(6, 0.4))
 ax1.set_xlim((start,end))
 for i in range(len(binning)-1):
-	k = int(round((binning[i]-case[chr]['c_start'])/c_info.resol))
+	k = int(round((binning[i]-case['%s'%chr]['c_start'])/c_info.resol))
 	ax1.axvspan(binning[i], binning[i+1], color=palette[cols1[k]])
 ax1.xaxis.set_visible(False)
 ax1.yaxis.set_visible(False)
@@ -106,13 +106,13 @@ ax1.spines['bottom'].set_visible(False)
 ax1.spines['left'].set_visible(False)
 ax1.spines['right'].set_visible(False)
 # Uncomment the following line to save the plot
-#plt.savefig("1st_most_present_chr%d[%.3f-%.3f].pdf"%(chr,start,end))
+plt.savefig("1st_most_present_chr%d[%.3f-%.3f].pdf"%(chr,start,end))
 
 # Second most present
 fig2, ax2 = plt.subplots(figsize=(6, 0.4))
 ax2.set_xlim((start,end))
 for i in range(len(binning)-1):
-	k = int(round((binning[i]-case[chr]['c_start'])/c_info.resol))
+	k = int(round((binning[i]-case['%s'%chr]['c_start'])/c_info.resol))
 	ax2.axvspan(binning[i], binning[i+1], color=palette[cols2[k]])
 ax2.xaxis.set_visible(False)
 ax2.yaxis.set_visible(False)
@@ -121,4 +121,4 @@ ax2.spines['bottom'].set_visible(False)
 ax2.spines['left'].set_visible(False)
 ax2.spines['right'].set_visible(False)
 # Uncomment the following line to save the plot
-#plt.savefig("2nd_most_present_chr%d[%.3f-%.3f].pdf"%(chr,start,end))
+plt.savefig("2nd_most_present_chr%d[%.3f-%.3f].pdf"%(chr,start,end))
